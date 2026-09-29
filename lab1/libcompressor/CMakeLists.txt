@@ -1,0 +1,15 @@
+add_library(libcompressor STATIC src/libcompressor.cpp)
+target_include_directories(libcompressor PUBLIC
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+    $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>
+)
+target_link_libraries(libcompressor PUBLIC ZLIB::ZLIB BZip2::BZip2)
+
+target_compile_options(libcompressor PRIVATE -Wall -Wextra -Wpedantic -Werror)
+
+install(TARGETS libcompressor
+    ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
+    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+)
+install(DIRECTORY include/ DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
+add_subdirectory(tests)
