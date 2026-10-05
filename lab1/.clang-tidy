@@ -1,12 +1,15 @@
-Checks: >
-  bugprone-*,
-  cert-*,
-  clang-analyzer-*,
-  cppcoreguidelines-*,
-  performance-*,
-  readability-*
-
+Checks:          "clang-diagnostic-*,clang-analyzer-*,bugprone-*, cert-*, clang-analyzer-*, performance-*\n"
 WarningsAsErrors: ''
-FormatStyle: none
-
+HeaderFileExtensions:
+  - ''
+  - h
+  - hh
+  - hpp
+  - hxx
+ImplementationFileExtensions:
+  - c
+  - cc
+  - cpp
+  - cxx
 HeaderFilterRegex: '.*libcompressor.*|.*compressor.*'
+ExcludeHeaderFilterRegex: ''

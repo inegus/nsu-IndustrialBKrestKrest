@@ -1,0 +1,19 @@
+{
+    "cmake.buildDirectory": "${workspaceFolder}/build",
+    "cmake.generator": "Ninja",
+    "cmake.configureSettings": {
+        "CMAKE_C_COMPILER": "clang",
+        "CMAKE_CXX_COMPILER": "clang++",
+        "CMAKE_TOOLCHAIN_FILE": "${workspaceFolder}/build/conan_toolchain.cmake",
+        "CMAKE_EXPORT_COMPILE_COMMANDS": true
+    },
+    "editor.defaultFormatter": "xaver.clang-format",
+    "clang-format.executable": "/usr/bin/clang-format",
+    "clang-format.style": "file",
+    "clangd.arguments": [
+        "--compile-commands-dir=${workspaceFolder}/build",
+        "--clang-tidy",
+        "--background-index",
+    ],
+    "editor.formatOnSave": true
+}

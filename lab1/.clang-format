@@ -1,6 +1,6 @@
 BasedOnStyle: Google
-IndentWidth: 4
+IndentWidth: 2
 DerivePointerAlignment: false
-PointerAlignment: Right
+PointerAlignment: Left
 ColumnLimit: 120
-BreakBeforeBraces: GNU
+BreakBeforeBraces: Linux
